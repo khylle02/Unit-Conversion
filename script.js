@@ -5,6 +5,9 @@ console.log(convertBtn)
 let lenghtEl = document.getElementById('length-result');
 let volumeEl = document.getElementById('volume-result');
 let massEl = document.getElementById('mass-result');
+
+ 
+
 convertBtn.addEventListener('click', function(){
     console.log(inputEl.value)
     solutionone()
@@ -20,11 +23,12 @@ function solutionone(){
     let feetSol = inputEl.value * 0.3048
     let feet = feetSol.toFixed(3)
     solution += `
+        <p class="supporting-head">Length(Meter/Feet)</p>
         <p class="supporting-text">
             ${inputEl.value} meters = ${meter} feet | ${inputEl.value} feet = ${feet} meters
         </p>
     `
-    lenghtEl.innerHTML += solution
+    lenghtEl.innerHTML = solution
 }
 function solutiontwo(){
     let solution = " "
@@ -33,11 +37,12 @@ function solutiontwo(){
     let gallonsSol = inputEl.value * 3.785411784
     let gallons = gallonsSol.toFixed(3)
     solution += `
+        <p class="supporting-head">Volume(Liters/Gallons)</p>
         <p class="supporting-text">
             ${inputEl.value} liters = ${liters} gallons | ${inputEl.value} gallons = ${gallons} liters
         </p>
     `
-    volumeEl.innerHTML += solution
+    volumeEl.innerHTML = solution
 }
 
 function solutionthree(){
@@ -47,15 +52,13 @@ function solutionthree(){
     let poundsSol = inputEl.value * 0.45359237
     let pounds = poundsSol.toFixed(3)
     solution += `
+        <p class="supporting-head">Mass(Kilograms/Pounds)</p>
         <p class="supporting-text">
             ${inputEl.value} kilos = ${kilos} pounds | ${inputEl.value} pounds = ${pounds} kilos
         </p>
     `
-    massEl.innerHTML += solution
+    massEl.innerHTML  = solution
 }
 
 
 
-
-
-//create a length meter/feet function
